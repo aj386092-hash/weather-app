@@ -125,13 +125,14 @@
   </div>
 
   <script>
-    const apiKey = "a4911e0ff1fc4f1b988172155251909";
+    const apiKey = "37805c5a4bb51614187590e5f7a28208";
 
     async function getWeather() {
       const location = document.getElementById("locationInput").value;
       if (!location) return;
 
-      const url = `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${location}&days=3&aqi=yes&alerts=no`;
+      const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}&units=metric
+`;
 
       try {
         const response = await fetch(url);
